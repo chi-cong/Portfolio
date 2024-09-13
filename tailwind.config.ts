@@ -21,6 +21,7 @@ const config: Config = {
       },
       colors: {
         primary: "white",
+        accent: "rgb(255,255,255,0.25)",
         description: "rgb(255,255,255,0.75)",
         "hero-transparent": "rgb(33, 33, 33, 0.5)",
       },

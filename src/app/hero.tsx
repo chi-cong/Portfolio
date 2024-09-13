@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { HeroFrameworks } from "@/components/hero-frameworks";
+import { HeroFrameworks, HeroFrameworkName } from "@/components";
 
 export const Hero = () => {
   return (
-    <div className="w-screen h-dvh bg-fixed bg-[url('../assets/img/hero-bg.jpg')] padding">
+    <div
+      className="w-screen h-dvh bg-fixed bg-[url('../assets/img/hero-bg.jpg')] padding"
+      id='hero'
+    >
       <div className='w-full h-full bg-hero-transparent flex flex-col justify-center pl-8 gap-8'>
         <div className='flex'>
           <h2
@@ -34,10 +37,9 @@ export const Hero = () => {
           </h2>
         </div>
         <div className='text-5xl max-w-7xl'>
-          <p className='text-description w-full break-normal '>
+          <p className='text-description w-full break-normal text-5xl'>
             A young, enthusiastic and skilled developer. I have worked in many
-            technologies include
-            <span className='text-cyan-500 w-full break-normal '> React</span>
+            technologies include <HeroFrameworkName />
           </p>
         </div>
         <HeroFrameworks />
