@@ -8,6 +8,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-white: white;
+  --primary-black: ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,34 +33,5 @@
 }
 * {
   font-family: "Inter", Helvetica, sans-serif;
-}
-
-.hero-selected-framework {
-  transform-origin: top center;
-  animation: newFramework 150ms;
-}
-.hero-old-selected-framework {
-  transform-origin: bottom center;
-  animation: oldFramework 150ms;
-}
-
-@keyframes newFramework {
-  from {
-    transform: rotateX(90deg);
-    opacity: 0.1;
-  }
-  to {
-    transform: rotateX(0deg);
-    opacity: 0.9;
-  }
-}
-@keyframes oldFramework {
-  from {
-    transform: rotateX(0deg);
-    opacity: 0.9;
-  }
-  to {
-    transform: rotateX(-90deg);
-    opacity: 0.1;
-  }
+  scrollbar-gutter: ;
 }

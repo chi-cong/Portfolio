@@ -23,7 +23,7 @@ export const HeroFrameworkName = () => {
         <>
           <span
             className={clsx(
-              "w-full break-normal absolute inline-block top-0 hero-selected-framework",
+              `w-full break-normal absolute inline-block top-0 ${styles["hero-selected-framework"]}`,
               {
                 "text-cyan-500": name === "React",
                 "text-white": name === "Nextjs",
@@ -38,7 +38,7 @@ export const HeroFrameworkName = () => {
           </span>
           <span
             className={clsx(
-              "w-full break-normal absolute inline-block top-0 hero-old-selected-framework",
+              `w-full break-normal absolute inline-block top-0 ${styles["hero-old-selected-framework"]}`,
               {
                 "text-cyan-500": previousName === "React",
                 "text-red-500": previousName === "Angular",

@@ -22,7 +22,7 @@ export const HeroFrameworks = () => {
   return (
     <div
       className={clsx(
-        "h-28 flex items-center justify-start gap-6 duration-500 relative",
+        "h-28 flex items-center justify-start gap-6 duration-700 relative",
         {
           "-left-5 opacity-0": !isShowed,
           "left-0 opacity-100": isShowed,
@@ -32,38 +32,42 @@ export const HeroFrameworks = () => {
       <Image
         onMouseEnter={() => selectFramework("React")}
         src={reactLogo}
-        className='duration-150 w-20 h-20 hover:w-24 hover:h-24 '
+        className='duration-150 w-20 h-20 hover:w-24 hover:h-24 hover:shadow-md'
         alt='React'
       />
       <Image
         onMouseEnter={() => selectFramework("Angular")}
         src={angularLogo}
         alt='Angular'
-        className={clsx("duration-150 w-20 h-20 hover:w-24 hover:h-24")}
+        className={clsx(
+          "duration-150 w-20 h-20 hover:w-24 hover:h-24  hover:shadow-md"
+        )}
       />
       <Image
         onMouseEnter={() => selectFramework("Nextjs")}
         src={nextjsLogo}
         alt='Angular'
-        className={clsx("duration-150 w-20 h-20 hover:w-24 hover:h-24")}
+        className={clsx(
+          "duration-150 w-20 h-20 hover:w-24 hover:h-24 hover:shadow-md "
+        )}
       />
       <Image
         onMouseEnter={() => selectFramework("Flutter")}
         src={flutterLogo}
         alt='Flutter'
-        className='duration-150 w-16 h-20 hover:w-20 hover:h-24 '
+        className='duration-150 w-16 h-20 hover:w-20 hover:h-24  hover:shadow-md'
       />
       <Image
         onMouseEnter={() => selectFramework("Nodejs")}
         src={nodejsLogo}
         alt='Nodejs'
-        className='duration-150 w-20 h-20 hover:w-24 hover:h-24 '
+        className='duration-150 w-20 h-20 hover:w-24 hover:h-24 hover:shadow-md hover:shadow-green-600 hover:bg-primary-black hover:rounded'
       />
       <Image
         onMouseEnter={() => selectFramework("Dotnet")}
         src={dotnetLogo}
         alt='Dotnet'
-        className='duration-150 w-20 h-20 hover:w-24 hover:h-24 '
+        className='duration-150 w-20 h-20 hover:w-24 hover:h-24 hover:shadow-md '
       />
     </div>
   );

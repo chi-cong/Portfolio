@@ -21,7 +21,10 @@ const config: Config = {
       },
       colors: {
         primary: "white",
+        "primary-black": "#141415",
         accent: "rgb(255,255,255,0.25)",
+        "primary-blue": "#00A8E8",
+        "primary-pink": "#FF70A6",
         description: "rgb(255,255,255,0.75)",
         "hero-transparent": "rgb(33, 33, 33, 0.5)",
       },

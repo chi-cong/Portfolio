@@ -1,0 +1,29 @@
+.hero-selected-framework {
+  transform-origin: top center;
+  animation: newFramework 150ms;
+}
+.hero-old-selected-framework {
+  transform-origin: bottom center;
+  animation: oldFramework 150ms;
+}
+
+@keyframes newFramework {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0.1;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 0.9;
+  }
+}
+@keyframes oldFramework {
+  from {
+    transform: rotateX(0deg);
+    opacity: 0.9;
+  }
+  to {
+    transform: rotateX(-90deg);
+    opacity: 0.1;
+  }
+}
