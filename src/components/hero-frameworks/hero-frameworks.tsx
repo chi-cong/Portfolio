@@ -61,7 +61,7 @@ export const HeroFrameworks = () => {
         onMouseEnter={() => selectFramework("Nodejs")}
         src={nodejsLogo}
         alt='Nodejs'
-        className='duration-150 w-20 h-20 hover:w-24 hover:h-24 hover:shadow-md hover:shadow-green-600 hover:bg-primary-black hover:rounded'
+        className='duration-150 w-20 h-20 hover:w-24 hover:h-24 hover:shadow-md'
       />
       <Image
         onMouseEnter={() => selectFramework("Dotnet")}

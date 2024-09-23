@@ -1,6 +1,5 @@
 import { Hero } from "./hero";
-import { Timeline } from "@/components/timeline/timeline";
-import { HeadNavbar } from "@/components";
+import { Timeline, HeadNavbar, Projects } from "@/components";
 
 export default function Home() {
   return (
@@ -9,6 +8,7 @@ export default function Home() {
       <Hero />
       <div className='bg-primary-black w-full min-h-dvh shadow-2xl '>
         <Timeline />
+        <Projects />
       </div>
     </main>
   );
