@@ -2,6 +2,7 @@ import { TimelineItem } from "@/components/timeline-item";
 import { TimelineData } from "@/share/models";
 import { FaAnglesDown } from "react-icons/fa6";
 import clsx from "clsx";
+import { GradientTiTle } from "../gradient-title";
 
 const mockData: TimelineData[] = [
   {
@@ -32,12 +33,7 @@ export const Timeline = () => {
 
   return (
     <div className='flex flex-col pb-6 min-h-dvh gap-8'>
-      <div className='h-0.5 w-full bg-gradient-to-r from-primary-blue to-primary-pink' />
-      <div className={`text-6xl w-full  justify-center flex items-center p-7 `}>
-        <span className='bg-gradient-to-r from-primary-blue to-primary-pink bg-clip-text text-transparent'>
-          MY TIMELINE
-        </span>
-      </div>
+      <GradientTiTle title='MY TIMELINE' />
       <div className='w-full text-primary flex flex-col items-center justify-start '>
         {mockData.map((timeline, index) => {
           if (side === "left") {

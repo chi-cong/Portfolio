@@ -36,18 +36,15 @@ export const Hero = () => {
         </div>
         <div className='lg:text-3xl xl:text-4xl max-w-7xl'>
           <p className='text-description w-full break-normal '>
-            A young, enthusiastic and skilled developer. I have worked in many
-            technologies include <HeroFrameworkName />
+            A passionate and proficient developer with experience in various
+            technologies, including <HeroFrameworkName />
           </p>
         </div>
         <div className='flex gap-10 font-black text-2xl'>
-          <Button className='pt-6 pb-6 w-48 font-semibold text-lg'>
-            Contact Me
+          <Button className='pt-6 pb-6 w-48  text-lg'>
+            <Link href='#contact'>Contact Me</Link>
           </Button>
-          <Button
-            variant={"outline"}
-            className='pt-6 pb-6 w-48 ont-semibold text-lg'
-          >
+          <Button variant={"outline"} className='pt-6 pb-6 w-48 text-lg'>
             <Link href='#projects'>See My Works</Link>
           </Button>
         </div>

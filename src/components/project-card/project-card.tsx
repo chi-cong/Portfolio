@@ -13,6 +13,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui";
+import Link from "next/link";
 import {
   SiNextdotjs,
   SiSupabase,
@@ -32,12 +33,13 @@ interface ProjectCardProps {
     name: string;
     description: string;
     mainTechs: string[];
+    link: string;
   };
 }
 
 const techIconMap = (tech: string) => {
   switch (tech) {
-    case "Next":
+    case "Nextjs":
       return <SiNextdotjs />;
     case "Supabase":
       return <SiSupabase />;
@@ -64,29 +66,31 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
       <CardHeader>
         <CardTitle>{data.name}</CardTitle>
         <CardDescription>{data.description}</CardDescription>
-        <CardContent>
-          <div className='w-full flex gap-2 text-primary text-3xl mt-2'>
-            {data.mainTechs.map((tech, index) => {
-              return (
-                <TooltipProvider key={index}>
-                  <Tooltip>
-                    <TooltipTrigger asChild>{techIconMap(tech)}</TooltipTrigger>
-                    <TooltipContent>
-                      <p>{tech}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              );
-            })}
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Button variant='outline' className='flex items-center gap-2'>
-            <span>Checkout</span>
-            <FaArrowRightLong />
-          </Button>
-        </CardFooter>
       </CardHeader>
+      <CardContent>
+        <div className='w-full flex gap-2 text-primary text-3xl'>
+          {data.mainTechs.map((tech, index) => {
+            return (
+              <TooltipProvider key={index}>
+                <Tooltip>
+                  <TooltipTrigger asChild>{techIconMap(tech)}</TooltipTrigger>
+                  <TooltipContent>
+                    <p>{tech}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            );
+          })}
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button variant='outline' className='flex items-center gap-2'>
+          <Link target='_blank' href={data.link}>
+            Checkout
+          </Link>
+          <FaArrowRightLong />
+        </Button>
+      </CardFooter>
     </Card>
   );
 };

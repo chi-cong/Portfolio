@@ -1,5 +1,5 @@
 import { Hero } from "./hero";
-import { Timeline, HeadNavbar, Projects } from "@/components";
+import { Timeline, HeadNavbar, Projects, Contact } from "@/components";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <div className='bg-primary-black w-full min-h-dvh shadow-2xl '>
         <Timeline />
         <Projects />
+        <Contact />
       </div>
     </main>
   );
